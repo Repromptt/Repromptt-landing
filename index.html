@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
     <!--nav bar-->
     <nav id="nav-bar" class="">
         <div class="container nav flex">
@@ -26,11 +29,13 @@
     </nav>
     <!--hero section-->
     <section id="hero">
+         <div id="particles-js"></div>
         <div class="container hero flex">
             <div class="hero-text">
                 <h1>Refine your prompts and master the art of prompt writing.</h1>
-                <p>Unlock AI’s full potential by creating, correcting, and learning from every prompt you write—with clarity and confidence.
-Turn every prompt into a learning experience and elevate your results with intelligent guidance.</p>
+                <h5>Unlock AI’s full potential by creating, correcting, and learning from every prompt you write—with clarity and confidence.
+Turn every prompt into a learning experience and elevate your results with intelligent guidance.</h5>
+<br>
                 <div class="hero-buttons flex">
                     <a href="https://play.google.com/store/apps/details?id=com.github.android" class="primary-btn shadow">Download App</a>
                     <a href="#" class="primary-btn play-btn shadow"><i class="fa-solid fa-play"></i></a>
@@ -370,5 +375,86 @@ Turn every prompt into a learning experience and elevate your results with intel
         }
         window.addEventListener('scroll', stick);
     </script>
+    <script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": { "value": "#ffffff" },
+    "shape": {
+      "type": "circle",
+      "stroke": { "width": 0, "color": "#000000" },
+      "polygon": { "nb_sides": 5 },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": { "enable": false }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": { "enable": false }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": { "opacity": 1 }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": { "particles_nb": 4 },
+      "remove": { "particles_nb": 2 }
+    }
+  },
+  "retina_detect": true
+});
+
+</script>
+
+
 </body>
 </html>

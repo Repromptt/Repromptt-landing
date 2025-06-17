@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&family=Poppins:wght@400;700&display=swap');
 /* --------Root Variables------------- */
 :root{
-    --primary-color:rgb(142, 45, 233);
+    --primary-color:rgb(176, 100, 247);
 }
 /* ----------resets------------ */
 *{
@@ -162,12 +162,23 @@ a{
     color:white;
     position: relative;
 }
+/* Positioning the particle canvas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
 .hero{
     min-height:95vh;
     max-width: 100%;
     padding: 5px;
     padding-top:80px;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 .hero-text h1{
     margin-bottom: 20px;
