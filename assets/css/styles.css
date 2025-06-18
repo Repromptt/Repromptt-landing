@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&family=Poppins:wght@400;700&display=swap');
 /* --------Root Variables------------- */
 :root{
-    --primary-color:rgb(176, 100, 247);
+    --primary-color:#2A9D8F;
 }
 /* ----------resets------------ */
 *{
@@ -16,10 +16,12 @@ html,body{
     width:100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color:#f8f3ed ;
 }
 body{
     font-family: 'Karla',Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    background-color:#f8f3ed ;
 }
 h1{
     font-size:2rem;
@@ -96,7 +98,7 @@ a{
 }
 .designation{
     font-size:.9rem;
-    color:grey;
+    color:#2E2E2E;
 }
 .light-blue-bg{
     background-color: #F8F8FF;
@@ -237,7 +239,7 @@ a{
     animation:orbit 5s linear 0s infinite;
 }
 .hero-img img{
-    animation:updown 1s ease-in-out infinite alternate;
+    /* animation:updown 1s ease-in-out infinite alternate; */
 }
 .hero-orbit{
     width:250px;
@@ -261,6 +263,7 @@ a{
 /* features */
 .features{
     padding-block: 40px;
+    
 }
 .feature-cards{
     gap:30px;
@@ -320,7 +323,7 @@ a{
 
 /* download app */
 #download{
-    background: linear-gradient(rgba(2, 45, 185, 0.5),rgba(32, 12, 122, 0.5)), url(../images/download-app-bg.jpg) no-repeat fixed;
+    background: linear-gradient(rgba(41, 44, 42, 0.5),rgba(159, 197, 23, 0.5)), url(../images/download-app-bg.jpg) no-repeat fixed;
     background-size:cover;
 }
 .download{
@@ -360,6 +363,7 @@ a{
 /* reviews */
 .reviews{
     padding-block:20px;
+    background-color:#f8f3ed ;
 }
 .reviews-cards{
     gap: 20px;
@@ -393,7 +397,8 @@ a{
     border-radius:50%;
 }
 .reviews-cards p{
-    color:grey;
+    color: #2E2E2E;
+ 
 }
 .ratings i{
     color:#FFA500;
@@ -411,7 +416,7 @@ a{
 .pricing-cards .card-body{
     margin:20px 50px;
     gap:20px;
-    color:grey;
+    color:#2E2E2E;
 }
 .price{
     flex-direction: row;
@@ -447,6 +452,7 @@ a{
 /* team members */
 #team{
     padding-block:30px;
+    background-color:#f8f3ed ;
 }
 .member-cards{
     gap:20px;
@@ -485,6 +491,7 @@ a{
 /* contact */
 .contact{
     padding-block: 30px;
+    background-color:#f8f3ed ;
 }
 .contact-det-form{
     width: 100%;
