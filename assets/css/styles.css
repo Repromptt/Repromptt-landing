@@ -95,6 +95,7 @@ a{
     gap:15px;
     border-radius:15px;
     width: clamp(200px,80%,350px);
+    background-color: white;
 }
 .designation{
     font-size:.9rem;
