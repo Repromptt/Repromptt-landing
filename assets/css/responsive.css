@@ -2,13 +2,17 @@
 @media screen and (min-width:576px) {
     .hero{
         max-width: 80%;
+        margin-top: 5vh;
+    }
+    #hero{
+        margin-top: 5vh;
     }
     .faq, .contact{
         max-width: 80%;
     }
     footer .page-links>.link-column:nth-child(1){
         max-width: 70%;
-    }
+    }9
 }
 @media screen and (min-width:768px) {
     h1{
