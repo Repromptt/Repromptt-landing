@@ -343,7 +343,7 @@
                     <a href="">Overview</a>
                     <a href="#pricing">Pricing</a>
                     <a href="#download">Download</a>
-                    <a href="">Privacy Policy</a>
+                    <a href="https://www.repromptt.com/#privacy">Privacy Policy</a>
                     <a href="mailto:support@repromptt.com">Help Center</a> 
                 </div>
                  
@@ -378,6 +378,50 @@
         }
         window.addEventListener('scroll', stick);
     </script>
+
+<script>
+window.onload = function () {
+  if (window.location.hash === "#privacy") {
+    alert(`✅ RePromptt Privacy Policy
+Effective Date: June 27, 2025
+
+At RePromptt, your privacy and trust are extremely important to us. This Privacy Policy outlines what information we collect and how we use it.
+
+🔒 What Information We Collect
+We collect only the minimum information necessary to provide our service:
+
+Email address – Used solely for account creation and login.
+
+Password – Securely stored in encrypted form for authentication.
+
+We do not collect any other personal information, browsing data, usage behavior, or device data.
+
+🛡️ How We Use Your Information
+Your data is used exclusively for:
+
+Verifying your identity when you log in.
+
+Providing access to your personal account features.
+
+We do not share, sell, or disclose your data to third parties under any circumstance.
+
+🔐 Data Security
+We implement industry-standard encryption and security practices to protect your credentials and prevent unauthorized access.
+
+🔄 Changes to This Policy
+We may occasionally update this policy to reflect changes in our practices. Any updates will be posted here with a revised effective date.
+
+📬 Contact Us
+If you have any questions, concerns, or feedback regarding this Privacy Policy, feel free to contact us at:
+support@repromptt.com`);
+    
+    // Remove #privacy from URL without reloading
+    history.replaceState(null, null, window.location.pathname);
+  }
+};
+</script>
+
+
     <script>
 particlesJS("particles-js", {
   "particles": {
