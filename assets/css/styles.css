@@ -25,6 +25,7 @@ body{
 }
 h1{
     font-size:2.2rem;
+    text-shadow: 3px 2px rgb(26, 3, 82);
     line-height: 40px;
     font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -36,10 +37,13 @@ h2{
 }
 h3{
     font-size:1.5rem;
+      text-shadow: 1px 1px rgb(214, 200, 250);
     font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
 }
 h4{
     font-size: 1.25rem;
+    text-shadow: 1px 1px rgb(49, 49, 56);
+
     font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
 }
 p{
@@ -51,6 +55,16 @@ a{
     font-size:1.25rem;
     text-decoration: none;
     color:inherit;
+}
+.usecase {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* default for larger screens */
+}
+@media (max-width: 768px) {
+    .usecase {
+        flex-direction: column; /* change for mobile */
+    }
 }
 
 
