@@ -11,6 +11,7 @@ Welcome to **Repromptt**. Your privacy is extremely important to us. This Privac
 We collect **only the minimum necessary personal data** to operate and provide our Services.
 
 ### Account Information
+- **User Name**
 - **Email Address**
 - **Password**
 
