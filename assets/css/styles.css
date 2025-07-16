@@ -10,13 +10,21 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+   
     /* outline: 1px solid red; */
 }
+
 html,body{
     width:100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color:#f8f3ed ;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+/* Hide scrollbar in Chrome, Safari */
+::-webkit-scrollbar {
+  display: none;
 }
 body{
     font-family: 'Karla',Verdana, Geneva, Tahoma, sans-serif;
@@ -361,7 +369,7 @@ a{
 
 /* download app */
 #download{
-    background: linear-gradient(rgba(41, 44, 42, 0.5),rgba(159, 197, 23, 0.5)), url(../images/download-app-bg.jpg) no-repeat fixed;
+    background: linear-gradient(#7e51fc65,#4a309298), url(../images/heeo-repromptt.png) no-repeat fixed;
     background-size:cover;
 }
 .download{
@@ -536,7 +544,7 @@ a{
 }
 .contact-details>.flex{
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     padding:30px;
     gap:10px;
 }
