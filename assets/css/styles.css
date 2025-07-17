@@ -276,9 +276,7 @@ a{
     right:2vw;
     animation:orbit 5s linear 0s infinite;
 }
-.hero-img img{
-    /* animation:updown 1s ease-in-out infinite alternate; */
-}
+
 .hero-orbit{
     width:250px;
     height:250px;
