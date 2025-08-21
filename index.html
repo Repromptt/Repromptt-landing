@@ -42,9 +42,10 @@
                 <h4 style="font-style: italic;">Learn how to get more accurate, helpful replies from AI tools like ChatGPT, Grok, Gemini, and Copilot. No tech skills needed. Just ask.</h4>
 <br>
                 <div class="hero-buttons flex">
-                    <a href="https://play.google.com/store/apps/details?" class="primary-btn shadow">Try it free</a>
-                    <a href="#" class="primary-btn play-btn shadow" id="playButton"><i class="fa-solid fa-play"></i></a>
-                    
+                    <a href="#download" class="primary-btn shadow">Try it free</a>
+                    <a href="#" class="primary-btn play-btn shadow" id="playButton">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-img">
@@ -58,16 +59,20 @@
         </div>
     </section>
 
-
-<div id="videoModal" class="modal">
-  <div class="modal-content">
+    <div id="videoModal" class="modal" style="display:none;">
+  <div class="modal-content" style="margin-top: 20vh;">
     <span class="close-btn">&times;</span>
-    <video id="localVideo" controls autoplay>
-      <source src="/assets/images/0712.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <iframe id="youtubeVideo"
+     
+      src="https://www.youtube.com/embed/_jHKmhX6mfU?enablejsapi=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
 </div>
+
+
 
 
     <!--features-->
@@ -165,14 +170,13 @@ Send your optimized prompt to ChatGPT, Gemini, Copilot, or Grok with ease.</p>
                 <div class="download-card card shadow flex">
                     <i class="fa-brands fa-google-play primary-color"></i>
                     <h3>Google Play</h3>
-                    <p>Coming Soon</p>
-                    <a class="primary-btn shadow" href="">Download</a>
+                    <a class="primary-btn shadow" href="https://play.google.com/store/apps/details?id=com.repromptt.repromptt">Download</a>
                 </div>
                 <div class="download-card card shadow flex">
                     <i class="fa-brands fa-apple primary-color"></i>
                     <h3>Apple Store</h3>
-                    <p>Coming Soon</p>
-                    <a class="primary-btn shadow" href="">Download</a>
+                    
+                    <a class="primary-btn shadow" href="https://apps.apple.com/us/app/repromptt/id6747834696">Download</a>
                 </div>
                
             </div>
@@ -281,7 +285,7 @@ Send your optimized prompt to ChatGPT, Gemini, Copilot, or Grok with ease.</p>
                             <li><i class="fa-solid fa-check"></i> Basic Feedback & Learning</li><hr>
                             <li><i class="fa-solid fa-check"></i> Access to Community Support</li><hr>
                             </ul>
-                        <a href="#" class="primary-btn shadow hover">Try It Free</a>
+                        <a href="#download" class="primary-btn shadow hover">Try It Free</a>
                     </div>
                 </div>
                 <div class="card shadow" style="height: 400px; ">
@@ -298,7 +302,7 @@ Send your optimized prompt to ChatGPT, Gemini, Copilot, or Grok with ease.</p>
                             <li><i class="fa-solid fa-check"></i> Advanced Feedback & Learning</li><hr>
                             <li><i class="fa-solid fa-check"></i> Priority Support & Features</li><hr>
                            </ul>
-                        <a href="#" class="primary-btn shadow hover">Know More</a>
+                        <a href="#download" class="primary-btn shadow hover">Know More</a>
                     </div>
                 </div>
                 
@@ -460,25 +464,35 @@ Send your optimized prompt to ChatGPT, Gemini, Copilot, or Grok with ease.</p>
   const playButton = document.getElementById("playButton");
   const modal = document.getElementById("videoModal");
   const closeBtn = document.querySelector(".close-btn");
-  const video = document.getElementById("localVideo");
+  const video = document.getElementById("youtubeVideo");
 
+  // Open modal and autoplay video
   playButton.addEventListener("click", function (e) {
     e.preventDefault();
     modal.style.display = "block";
-    video.play();
+    video.contentWindow.postMessage(
+      '{"event":"command","func":"playVideo","args":""}',
+      "*"
+    );
   });
 
+  // Close modal and stop video
   closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
-    video.pause();
-    video.currentTime = 0;
+    video.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      "*"
+    );
   });
 
+  // Close when clicking outside modal
   window.addEventListener("click", function (e) {
     if (e.target === modal) {
       modal.style.display = "none";
-      video.pause();
-      video.currentTime = 0;
+      video.contentWindow.postMessage(
+        '{"event":"command","func":"stopVideo","args":""}',
+        "*"
+      );
     }
   });
 </script>
